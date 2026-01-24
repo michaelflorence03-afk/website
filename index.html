@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+<header class="header">
+  <div class="header-top">
+    <img src="images/uni-logo.png" alt="Chief Loyal University Logo" class="university-logo">
+    <h1 class="university-title">CHIEF LOYAL UNIVERSITY</h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="dropdown">
+        <a href="#">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="health_school.html">School of Health </a></li>
+          <li><a href="SET.html">School of Engineering & Technology</a></li>
+          <li><a href="SOB.html">School of Business</a></li>
+          <li><a href="COED.html">College of Education</a></li>
+        </ul>
+      </li>
+      <li><a href="programmes.html">Admissions</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="http://localhost/college-website/login.php">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="slides">
+    <img src="images/college1.jpg.jpg" alt="Campus View">
+    <img src="images/college2.jpg.jpg" alt="Library">
+    <img src="images/wahitimu.jpg" alt="Graduation">
+  </div>
+  <div class="hero-text">
+    <h1>Welcome to MyCollege</h1>
+    <p>Empowering Students for a Better Future</p>
+    <a href="#" class="btn">Apply Now</a>
+  </div>
+</section>
+
+  <div class="welcome-container">
+  <div class="welcome-card">
+    <img src="images/dean.jpg" alt="Vice Chancellor" class="vc-img">
+    <h2 class="vc-name">Vice Chancellor, Prof. Elizabeth Mshana</h2>
+    
+    <p>
+      We are pleased with your decision to undertake tertiary studies at
+      <b>Chief Loyal University (CLOU)</b>. You are warmly welcome to our Centre
+      of Excellence which offers value-added teaching, research, and public
+      service undertaken as part of the University Mission and Vision.
+      <b>Chief Loyal University</b> aims to ensure that you, as a student, gain
+      strong practical experience in your field, building your performance and
+      confidence even beyond.
+    </p>
+  </div>
+</div>
+<style>
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+  }
+
+  .welcome-card {
+    width: 90%;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .welcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  }
+
+  .vc-img {
+    width: 98px;
+    height: 93px;
+    border-radius: 45%;
+    object-fit: cover;
+    border: 4px solid darkcyan;
+    margin-bottom: 2px;
+  }
+
+  .vc-name {
+    font-size: 15px;
+    color: darkcyan;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+  }
+
+  .vc-title {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+  }
+
+  .welcome-title {
+    color: darkcyan;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .welcome-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .marquee-container {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+  }
+</style>
+
+
+<!-- 📘 UNIVERSITY INFORMATION SECTION -->
+<section class="info-timeline">
+  <h2 class="section-title">University Information & Key Highlights</h2>
+
+  <div class="info-wrapper">
+
+    <!-- LEFT COLUMN -->
+    <div class="info-column left">
+      <div class="info-item">
+        <h3>🌍 About the University</h3>
+        <p>
+          Chief Loyal University was established in 2010 in Dodoma and came out shining 
+          in 2013 after first graduates won the best project award in Mexico, that built 
+          a trust to many students who started to apply for joining the University till 
+          now as we have about 16,000 total students. And we're still committed to delivering high-quality
+          education, professional training, and impactful community development
+          programs across Tanzania. We aim to nurture learners into responsible,
+          skilled, and innovative leaders ready to make meaningful contributions
+          to society.
+        </p>
+      </div>
+
+      <div class="info-item">
+        <h3>🎯 Our Mission</h3>
+        <p>
+          Our mission is to empower individuals through knowledge, integrity,
+          and innovation—fostering an environment that supports research,
+          creativity, and lifelong learning, hence creating high number of proffesionals 
+          who will serve the country for good, and being more helpful to the entire society.
+        </p>
+      </div>
+
+      
+    </div>
+
+    <!-- RIGHT COLUMN (IMPORTANT LINKS ONLY) -->
+    <div class="info-column right">
+
+      <div class="info-item">
+      <h3>🚀 Our Vision</h3>
+      <p>
+        To become a leading center of excellence that inspires creativity, 
+        research advancement, and transformative community engagement across 
+        Africa and Worldwide. Also rising the level of Education, Science and 
+        Technology that will help us from being dependants on international experts
+      </p>
+     </div>
+
+      <div class="info-item">
+        <h3>🔗 Important Links</h3>
+        <ul class="info-links">
+          <li><a href="#">📅 Academic Calendar</a></li>
+          <li><a href="#">📝 Admission Requirements</a></li>
+          <li><a href="#">🎓 Scholarship Opportunities</a></li>
+          <li><a href="#">📚 Student Services</a></li>
+          <li><a href="#">📄 Downloadable Forms</a></li>
+          <li><a href="#">🧑‍🏫 Students Information System (SIS)</a></li>
+          <li><a href="#">🎓 CLOU Alumn group</a></li>
+          <li><a href="#">📘 University Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+  /* MAIN SECTION */
+.info-timeline {
+  padding: 80px 40px;
+  background: #ffffff;
+}
+
+.info-timeline .section-title {
+  text-align: center;
+  color: #046e57;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* WRAPPER WITH CENTER LINE */
+.info-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  gap: 40px;
+}
+
+/* Center vertical line */
+.info-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: #046e57;
+}
+
+/* COLUMNS */
+.info-column {
+  width: 50%;
+}
+
+.info-column.left {
+  padding-right: 40px;
+}
+
+.info-column.right {
+  padding-left: 40px;
+}
+
+/* ITEMS */
+.info-item {
+  margin-bottom: 40px;
+}
+
+.info-item h3 {
+  color: #046e57;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.info-item p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-links li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.info-links a {
+  color: red;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-links a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .info-wrapper {
+    flex-direction: column;
+  }
+
+  .info-wrapper::before {
+    display: none;
+  }
+
+  .info-column {
+    width: 100%;
+    padding: 0;
+  }
+  }
+</style>
+
+<!-- 🌿 CAMPUS LIFE GALLERY -->
+<section class="campus-gallery">
+  <h2 class="section-title">Campus Life at Chief Loyal University</h2>
+  <p class="section-subtitle">A glimpse of our vibrant community and beautiful campus.</p>
+
+  <div class="gallery-grid">
+    <img src="images/library.webp" alt="Students studying">
+    <img src="images/medico.jpg" alt="Sports day">
+    <img src="images/kota.jpg" alt="Library interior">
+    <img src="images/mabweni.jpg" alt="Graduation ceremony">
+    <img src="images/burudani.jpg" alt="Cultural festival">
+    <img src="images/admission5.jpg" alt="Science lab">
+    <img src="images/mahafari3.jpg" alt="Science lab">
+    <img src="images/wahitimu.jpg" alt="hostels">
+  </div>
+</section>
+
+<style>
+.campus-gallery {
+  text-align: center;
+  padding: 80px 40px;
+  background: #f8fdfd;
+}
+
+.section-title {
+  color: #046e57;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  height: 230px;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+  
+
+  <section class="announcement-banner">
+  <h2 class="announcement-title">📢 Latest Announcements & Events</h2>
+
+  <div class="announcement-wrapper" id="announcementWrapper">
+    <div class="announcement-track" id="announcementTrack">
+
+      <!-- Announcement 1 -->
+      <div class="announcement-item">
+        <div class="icon-circle">🎓</div>
+        <div class="announcement-content">
+          <h3>Graduation Ceremony 2025</h3>
+          <p>The 13th Graduation Ceremony will be held on <b>December 13, 2025</b> at the Main Hall. 
+            All graduating students must complete clearance by Nov 25. Also, for all graduates who wants to 
+            attend in the graduation ceremony should confirm on their SIS portal for the ceremony camettee
+            to be well informed and organized </p>
+        </div>
+      </div>
+
+      <!-- Announcement 2 -->
+      <div class="announcement-item">
+        <div class="icon-circle">🧑‍🏫</div>
+        <div class="announcement-content">
+          <h3>Academic Staff Seminar</h3>
+          <p>All academic staff are invited to a professional development seminar on <b>November 25, 2025</b> 
+            at the Innovation Center. Therefore, due to the importance of this seminar to all Academic Staff,
+            the class sessions will be canceled on the issued day for all targeted members to attend without missing</p>
+        </div>
+      </div>
+
+      <!-- Announcement 3 -->
+      <div class="announcement-item">
+        <div class="icon-circle">🏃‍♂️</div>
+        <div class="announcement-content">
+          <h3>Annual Sports Week</h3>
+          <p>Join us for our annual sports week from <b>December 1 – 7</b> this year. Departments will compete in football, 
+            netball, and athletics. So, for all players in each club should get ready for the competition, where only one wining
+            club  will be awarded with Trophies and Cash prizes on both football, netball and athletics</p> 
+           
+            
+        </div>
+      </div>
+
+      <!-- Announcement 4 -->
+      <div class="announcement-item">
+        <div class="icon-circle">💻</div>
+        <div class="announcement-content">
+          <h3>ICT Innovation Expo</h3>
+          <p>The School of Technology and Engineering will host the ICT Innovation Expo showcasing student projects on <b>January 20, 2026</b>.
+             All ICT students should use the remaining days to get ready, being well prepared and full organized on their projects that should be
+            done either individually or in groups, to ensure that we get the best innovative projects this year. And Award will go to the 3 best projects!! </p>
+        </div>
+      </div>
+
+      <!-- Duplicate for seamless scrolling -->
+      <div class="announcement-item">
+        <div class="icon-circle">🎓</div>
+        <div class="announcement-content">
+          <h3>Graduation Ceremony 2025</h3>
+          <p>The 13th Graduation Ceremony will be held on <b>December 13, 2025</b> at the Main Hall. 
+            All graduating students must complete clearance by Nov 25. Also, for all graduates who wants to 
+            attend in the graduation ceremony should confirm on their SIS portal for the ceremony camettee
+            to be well informed and organized </p>
+        </div>
+      </div>
+
+      <div class="announcement-item">
+        <div class="icon-circle">🧑‍🏫</div>
+        <div class="announcement-content">
+          <h3>Academic Staff Seminar</h3>
+          <p>All academic staff are invited to a professional development seminar on <b>November 25, 2025</b> 
+            at the Innovation Center. Therefore, due to the importance of this seminar to all Academic Staff,
+            the class sessions will be canceled on the issued day for all targeted members to attend without missing</p>      
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .announcement-banner {
+  width: 75%;
+  margin: 60px auto;
+  background: #f8fdfd;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.announcement-title {
+  color: #046e57;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.announcement-wrapper {
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔥 Faster and smoother animation */
+.announcement-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 8s linear infinite;
+}
+
+/* Each announcement card */
+.announcement-item {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon styling */
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  background: darkcyan;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.announcement-content {
+  text-align: left;
+}
+
+.announcement-content h3 {
+  color: #046e57;
+  font-size: 18px;
+  margin: 0 0 6px 0;
+}
+
+.announcement-content p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ✨ Seamless and faster scrolling animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause state */
+.paused {
+  animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .announcement-banner {
+    width: 85%;
+    padding: 25px 15px;
+  }
+  .announcement-wrapper {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .announcement-banner {
+    width: 90%;
+  }
+  .announcement-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .icon-circle {
+    margin-bottom: 10px;
+  }
+  .announcement-wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement-wrapper {
+    height: 180px;
+  }
+  .announcement-content p {
+    font-size: 14px;
+  }
+}
+</style>
+
+<script>
+  const track = document.getElementById("announcementTrack");
+  let paused = false;
+
+  // 🖱️ Pause when hovering (desktop)
+  track.addEventListener("mouseenter", () => {
+    track.classList.add("paused");
+  });
+  track.addEventListener("mouseleave", () => {
+    if (!paused) track.classList.remove("paused");
+  });
+
+  // 👆 Toggle pause/resume when clicked (mobile)
+  track.addEventListener("click", () => {
+    paused = !paused;
+    track.classList.toggle("paused", paused);
+  });
+</script>
+
+<section class="homepage-video-section">
+  <div class="video-wrapper">
+    <video id="homepageVideo" class="homepage-video" autoplay muted loop playsinline controlslist="nodownload">
+      <source src="images/welcomeCLOU.mp4" type="video/mp4">
+    </video>
+
+    <!-- SOUND BUTTON -->
+    <button id="soundToggle" class="sound-btn">🔇</button>
+  </div>
+</section>
+<style>
+  /* --- FULL WIDTH VIDEO SECTION --- */
+.homepage-video-section {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.homepage-video {
+  width: 100%;
+  height: 450px;       /* adjust if needed */
+  object-fit: cover;
+  display: block;
+}
+
+  .sound-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 20;           /* ensure button stays on top */
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+</style>
+  
+<!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-list">
+      <div class="testimonial-card">
+        <p>"MyCollege gave me the best foundation for my career. The lecturers are so supportive!"</p>
+        <h4>- Sarah, Computer Science</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The learning environment is amazing, and the facilities are world-class."</p>
+        <h4>- James, Business Studies</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"I loved the engineering program. The hands-on training really prepared me for real-world challenges."</p>
+        <h4>- Anita, Engineering</h4>
+      </div>
+    </div>
+  </section>
+
+    <!-- Call to Action Section -->
+  <section class="cta">
+    <h2>Ready to Start Your Journey?</h2>
+    <p>Join thousands of students building their future with MyCollege.</p>
+    <a href="programmes.html" class="btn-cta">Apply today</a>
+  </section>
+
+
+
+<!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2025 Chief Loyal University | All Rights Reserved</p>
+  </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("homepageVideo");
+  const soundBtn = document.getElementById("soundToggle");
+
+  soundBtn.addEventListener("click", function () {
+    video.muted = !video.muted;
+    soundBtn.textContent = video.muted ? "🔇" : "🔊";
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+  
+
+
+

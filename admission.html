@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form | MyCollege</title>
+  <link rel="stylesheet" href="#">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: darkcyan;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 50px;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffd700;
+    }
+
+    .admission-form {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .admission-form h2 {
+      text-align: center;
+      color: darkcyan;
+      margin-bottom: 20px;
+    }
+
+    .admission-form input,
+    .admission-form select,
+    .admission-form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .custom-dropdown {
+      position: relative;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .dropdown-list {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 4px;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-list label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .dropdown-list label:hover {
+      background-color: #e0f7fa;
+    }
+
+    .dropdown-list input[type="checkbox"] {
+      margin-left: 10px;
+      transform: scale(1.2);
+    }
+
+    .admission-form button {
+      background-color: darkcyan;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .admission-form button:hover {
+      background-color: #00796b;
+    }
+
+   
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Admission Application Form</div>
+    </nav>
+  </header>
+
+  <!-- Admission Form -->
+  <section class="admission-form">
+    <h2>Apply for Admission</h2>
+    <form action="submit_admission.php" method="post" id="admissionForm">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+<!-- ===== Course dropdown (replace previous course block) ===== -->
+<div class="course-select">
+  <div class="select-box" id="selectBox">Select up to 4 Courses ▼</div>
+  <div class="dropdown" id="dropdown">
+    <label><span>Bachelor of Science in Education</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Education"></label>
+    <label><span>Bachelor of Arts in Education</span> <input type="checkbox" name="course[]" value="Bachelor of Arts in Education"></label>
+    <label><span>Bachelor of Commerce with Education</span> <input type="checkbox" name="course[]" value="Bachelor of Commerce with Education"></label>
+    <label><span>Bachelor of Education in Special Education</span> <input type="checkbox" name="course[]" value="Bachelor of Education in Special Education"></label>
+    <label><span>Bachelor of Business Administration</span> <input type="checkbox" name="course[]" value="Bachelor of Business Administration"></label>
+    <label><span>Bachelor of Accountancy and Finance</span> <input type="checkbox" name="course[]" value="Bachelor of Accountancy and Finance"></label>
+    <label><span>Bachelor of Business in Marketing</span> <input type="checkbox" name="course[]" value="Bachelor of Business in Marketing"></label>
+    <label><span>Bachelor of Procurement and Supply</span> <input type="checkbox" name="course[]" value="Bachelor of Procurement and Supply"></label>
+    <label><span>Doctor of Medicine</span> <input type="checkbox" name="course[]" value="Doctor of Medicine"></label>
+    <label><span>Bachelor of Science in Nursing</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Nursing"></label>
+    <label><span>Bachelor of Pharmacy</span> <input type="checkbox" name="course[]" value="Bachelor of Pharmacy"></label>
+    <label><span>Bachelor of Science in Medical Laboratory</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Medical Laboratory"></label>
+    <label><span>Bachelor of Health Service Management</span> <input type="checkbox" name="course[]" value="Bachelor of Health Service Management"></label>
+    <label><span>Bachelor of Science in Information Technology</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Information Technology"></label>
+    <label><span>Bachelor of Computer Science</span> <input type="checkbox" name="course[]" value="Bachelor of Computer Science"></label>
+    <label><span>Bachelor of Science in Cybersecurity</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Cybersecurity"></label>
+    <label><span>Bachelor of Science in Civil Engineering</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Civil Engineering"></label>
+    <label><span>Bachelor of Science in Mechanical Engineering</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Mechanical Engineering"></label>
+    <label><span>Bachelor of Science in Telecommunications</span> <input type="checkbox" name="course[]" value="Bachelor of Science in Telecommunications"></label>
+  </div>
+</div>
+
+<select name="Education_Level" placeholder="Select Education_Level" required> 
+  <option value="Secondary School">Advanced Secondary School</option> 
+  <option value="Diploma">Diploma</option> 
+</select> 
+<input type="text" name="index_Number" placeholder="S0000-0000-2000 / 00NA0000000_E" required /> 
+<button type="submit">Submit Application</button> </form> 
+</section>
+
+<style>
+/* Insert into your existing <style> or page head */
+.course-select {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* make it wider so long course names stay on one line */
+  margin-bottom: 20px;
+}
+
+.select-box {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  z-index: 1000;
+}
+
+.dropdown label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown label:hover {
+  background-color: #f0f8ff;
+}
+
+.dropdown input[type="checkbox"] {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+/* visible class */
+.dropdown.show {
+  display: block;
+}
+</style>
+
+<script>
+/* Insert at bottom of page (after DOM) and ensure you remove the old handlers */
+(function() {
+  const selectBox = document.getElementById('selectBox');
+  const dropdown = document.getElementById('dropdown');
+  const checkboxes = dropdown.querySelectorAll("input[type='checkbox']");
+  const MAX = 4;
+
+  // Toggle dropdown when clicking the select box
+  selectBox.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dropdown.classList.toggle('show');
+  });
+
+  // Keep dropdown open when clicking inside it (do nothing special)
+  dropdown.addEventListener('click', function(e) {
+    e.stopPropagation(); // prevent the body click from closing immediately
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function() {
+    dropdown.classList.remove('show');
+  });
+
+  // Handle checkbox changes
+  function updateSelectLabel() {
+    const selected = Array.from(checkboxes).filter(c => c.checked).map(c => c.value);
+    selectBox.textContent = selected.length ? selected.join(", ") : "Select up to 4 Courses ▼";
+  }
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', function(e) {
+      const checked = Array.from(checkboxes).filter(c => c.checked);
+      if (checked.length > MAX) {
+        // prevent checking more than MAX
+        cb.checked = false;
+        alert('You can only select up to ' + MAX + ' courses.');
+        return;
+      }
+      updateSelectLabel();
+      // keep dropdown open after selection (do nothing)
+    });
+  });
+
+  // optional: close dropdown when user clicks a Done area or presses Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') dropdown.classList.remove('show');
+  });
+})();
+</script>
+
+
+</body>
+</html>

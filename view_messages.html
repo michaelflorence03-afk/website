@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Contact Messages - Chief Loyal University</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F0FFF0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #004d40;
+      color: white;
+      padding: 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .no-messages {
+      text-align: center;
+      color: #777;
+      font-style: italic;
+      padding: 20px;
+    }
+
+    .btn-clear {
+      background-color: #c62828;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 20px;
+      float: right;
+    }
+
+    .btn-clear:hover {
+      background-color: #b71c1c;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📨 Contact Messages - Chief Loyal University</h1>
+  </header>
+
+  <main>
+    <h2>Inbox</h2>
+    <p>Below are all messages sent through the “Contact Us” form.</p>
+
+    <table id="messagesTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="messagesBody"></tbody>
+    </table>
+
+    <button class="btn-clear" onclick="clearMessages()">🗑 Clear Messages</button>
+  </main>
+
+  <script>
+    const messagesTable = document.getElementById('messagesBody');
+
+    function loadMessages() {
+      const storedMessages = JSON.parse(localStorage.getItem('cluMessages')) || [];
+      messagesTable.innerHTML = '';
+
+      if (storedMessages.length === 0) {
+        messagesTable.innerHTML = `
+          <tr><td colspan="5" class="no-messages">No messages found.</td></tr>
+        `;
+        return;
+      }
+
+      storedMessages.forEach((msg, index) => {
+        const row = `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${msg.name}</td>
+            <td>${msg.email}</td>
+            <td>${msg.message}</td>
+            <td>${msg.date}</td>
+          </tr>
+        `;
+        messagesTable.insertAdjacentHTML('beforeend', row);
+      });
+    }
+
+    function clearMessages() {
+      if (confirm("Are you sure you want to delete all messages?")) {
+        localStorage.removeItem('cluMessages');
+        loadMessages();
+      }
+    }
+
+    // Load on page start
+    document.addEventListener('DOMContentLoaded', loadMessages);
+  </script>
+
+ 
+</body>
+</html>

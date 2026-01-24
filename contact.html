@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Chief Loyal University</title>
+
+  <!--preload images -->
+  <link rel="preload" as="image" href="images/admission1.jpg">
+  <link rel="preload" as="image" href="images/administration.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #F0FFF0;
+      color: #333;
+    }
+
+    /* when fully loaded */
+    body.loaded {
+      opacity: 1;
+    }
+
+    /* Hero section */
+    .hero {
+      background: url('images/administration.png') no-repeat center center/cover;
+      height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: bold;
+    }
+
+    /* Light bulb icon */
+    .bulb {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      font-size: 35px;
+      color: #888; 
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .bulb:hover {
+      color: yellow;
+      text-shadow: 0 0 15px #e7bf0b, 0 0 25px #FFD700;
+      transform: scale(1.1);
+    }
+
+    /* Contact details section */
+    .contact-info {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact-info h2 {
+      font-size: 28px;
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #004d40;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      margin: 0;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 22px;
+      background-color: #004d40;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: #00796b;
+    }
+
+    /* Popup forms (shared styling) */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .popup-content h2 {
+      margin-top: 0;
+      color: #004d40;
+    }
+
+    .popup-content input, .popup-content textarea {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .popup-content button {
+      background-color: #004d40;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .popup-content button:hover {
+      background-color: #00796b;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px; right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    /* Success message */
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    /* Footer */
+footer {
+  background: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 33px;
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Contact Chief Loyal University</h1>
+    <span class="bulb" onclick="openLogin()">💡</span>
+  </section>
+
+  <!-- Contact info section -->
+  <section class="contact-info">
+    <h2></h2>
+    <p><strong> we’d love to hear from you! Reach us using the details below or click the button to send a message directly.</strong></p>
+
+  <section class="contact-banner">
+  <h2 class="contact-title">📞 Get in touch with us</h2>
+  <p>Chief Loyal University</p>
+  <p>P.O.BOX 1324, DODOMA - TANZANIA</p>
+
+  <div class="contact-cards">
+    <!-- Column 1: Principal -->
+    <div class="leader-card">
+      <p><strong>Vice Chancellor</strong></p>
+      <p>📧 vicechancellor@clou.ac.tz</p>
+      <p>📞 +255 712 345 650</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>Deputy Vice Chancellor, ACADEMICS</strong></p>
+      <p>📧 Dvca@clou.ac.tz</p>
+      <p>📞 +255 712 345 658</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>DVC Planning & Finance</strong></p>
+      <p>📧 Dvcpfm@clou.ac.tz</p>
+      <p>📞 +255 712 345 418</p>
+    </div>
+
+    <!-- Column 2: Dean of Students -->
+    <div class="leader-card">
+      <p><strong>University Chaplain</strong></p>
+      <p>📧chaplain@clou.ac.tz</p>
+      <p>📞 +255 713 987 654</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>Admissions Officer</strong></p>
+      <p>📧 admissions@clou.ac.tz</p>
+      <p>📞 +255 713 945 600</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>Examination Officer</strong></p>
+      <p>📧 examinations@clou.ac.tz</p>
+      <p>📞 +255 732 564 008</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>IT officer</strong></p>
+      <p>📧 itofficer@clou.ac.tz</p>
+      <p>📞 +255 719 222 888</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>Dean of Students</strong></p>
+      <p>📧 deanofstudents@clou.ac.tz</p>
+      <p>📞 +255 739 022 586</p>
+    </div>
+
+    <!-- Column 3: Head of Admissions -->
+    <div class="leader-card">
+      <p><strong>DIRECTOR, School  of Health</strong></p>
+      <p>📧 healthschool@clou.ac.tz</p>
+      <p>📞 +255 729 102 000</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>DIRECTOR, School of Business</strong></p>
+      <p>📧 businessschool@clou.ac.tz</p>
+      <p>📞 +255 750 041 603</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>DIRECTOR, Engineering $ Technology</strong></p>
+      <p>📧 eng&tech@clou.ac.tz</p>
+      <p>📞 +255 712 940 605</p>
+    </div>
+
+    <div class="leader-card">
+      <p><strong>DIRECTOR, College of Education</strong></p>
+      <p>📧 coed@clou.ac.tz</p>
+      <p>📞 +255 719 823 980</p>
+    </div>
+  </div>
+</section>
+<style>
+  .contact-banner {
+  width: 90%;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden; /* hides image overflow */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Faded background image */
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/admission1.jpg') center/cover no-repeat;
+  filter: brightness(80%) blur(0.2px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Text and cards should appear above background */
+.contact-banner * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-title {
+  font-size: 28px;
+  color: #046e57;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.leader-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.leader-card p {
+  color: #333;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+</style>
+
+
+    <button class="contact-btn" onclick="openForm()">Send Message directly</button>
+  </section>
+
+  <!-- Popup form for users -->
+  <div class="popup" id="contactPopup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closeForm()">&times;</button>
+      <h2>Send a Message</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="successMessage" class="success-message">
+        ✅ Message sent successfully!
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Popup login form for communication officer -->
+  <div class="popup" id="loginPopup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closeLogin()">&times;</button>
+      <h2>Officer Login</h2>
+      <form id="loginForm">
+        <input type="text" id="officerUser" placeholder="Username" required />
+        <input type="password" id="officerPass" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Contact popup
+    const contactPopup = document.getElementById('contactPopup');
+    const contactForm = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMessage');
+
+    function openForm() { contactPopup.style.display = 'flex'; }
+    function closeForm() { contactPopup.style.display = 'none'; }
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const messages = JSON.parse(localStorage.getItem('cluMessages')) || [];
+      messages.push({
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        date: new Date().toLocaleString()
+      });
+      localStorage.setItem('cluMessages', JSON.stringify(messages));
+
+      successMsg.style.display = 'block';
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+        contactForm.reset();
+      }, 3000);
+    });
+
+    // Officer login popup
+    const loginPopup = document.getElementById('loginPopup');
+    const loginForm = document.getElementById('loginForm');
+
+    function openLogin() { loginPopup.style.display = 'flex'; }
+    function closeLogin() { loginPopup.style.display = 'none'; }
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Simple dummy login validation
+      const username = document.getElementById('officerUser').value;
+      const password = document.getElementById('officerPass').value;
+
+      if (username === "officer" && password === "1234") {
+        window.location.href = "view_messages.html";
+      } else {
+        alert("Invalid login credentials!");
+      }
+    });
+
+    // Close popups when clicking outside
+    window.addEventListener('click', function (e) {
+      if (e.target === contactPopup) closeForm();
+      if (e.target === loginPopup) closeLogin();
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2025 Chief Loyal University | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School of Health - Chief Loyal University</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0FFF0; /* HoneyDrew */
+      color: #333;
+    }
+
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .left-section {
+      flex: 2;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .left-section h2 {
+      color: darkcyan;
+      margin-bottom: 10px;
+    }
+
+    .left-section p {
+      line-height: 1.6;
+    }
+
+    .courses {
+      margin-top: 30px;
+    }
+
+    .courses h3 {
+      color: #004d40;
+      margin-bottom: 15px;
+      border-bottom: 2px solid darkcyan;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: darkcyan;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e0f7fa;
+    }
+
+    .apply-btn {
+      background-color: darkcyan;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #00796b;
+    }
+
+    .right-section {
+      flex: 1;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .director-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid darkcyan;
+    }
+
+    .director-name {
+      font-size: 20px;
+      color: darkcyan;
+      font-weight: bold;
+    }
+
+    .director-title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgb(12, 82, 82);
+      color: white;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">School Of Engineering & Technology (SET)</div>
+      <ul class="nav-links">
+        <li><a href="SOB.html">Next</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Left Content -->
+    <div class="left-section">
+      <h2>Welcome to the School of Engineering & Technology (SET)</h2>
+      <p>
+       Welcome to the innovative School of Engineering and Technology at CLOU, where creativity meets technical experience. Our school is a hub for forward-thinking engineers and Technologists who are passionate about designing, building, and innovating solutions to real-world problems.
+       With state-of-the-art facilities, cutting-edge research opportunities, and expert faculty, our programs equip students wit the knowledge, skills,and experience to excel to their chosen fields. From robotics and artificial intelligence to sustainable energy and cybersecurity, 
+       our curriculum is designed to tackle the complex challenges of the 21st century. Our aim is to produce hightly skilled and technoligists who can drive technical advancements and make a lasting impact in thier industries and communities.
+      </p>
+
+      <div class="courses">
+        <h3>Available Programs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Programme</th>
+              <th>Duration</th>
+              <th>Fee (TZS)</th>
+              <th>Director</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Bachelor of Science in Information Technology</td>
+              <td>3 Years</td>
+              <td>1,800,000</td>
+              <td>Dr. Anna Kawwele</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bachelor of Computer Science</td>
+              <td>4 Years</td>
+              <td>2,500,000</td>
+              <td>Mr. Ibrahim Kapama</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bachelor of Science in cybersecurity</td>
+              <td>4 Years</td>
+              <td>1,800,000</td>
+              <td>Ms. Faith Porter </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Bachelor of Science in Telecommunications</td>
+              <td>4 Years</td>
+              <td>3,500,000</td>
+              <td>Mr. Isack Malekesa</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Bachelor of Science in Civil Engineering</td>
+              <td>4 Years</td>
+              <td>3,500,000</td>
+              <td>Ms. Isabella Martin </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Bachelor of Science in Mechanical Engineering</td>
+              <td>4 Years</td>
+              <td>3,500,000</td>
+              <td>Mr. Shafii Abdulahman</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="apply-btn" onclick="window.open('programmes.html', '_blank')">Apply Now</button>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right-section">
+      <img src="images/director01.jpg" alt="Director of School of ENG & TECH" class="director-img">
+      <div class="director-name">Prof. Emmanuel Michael</div>
+      <div class="director-title">Director, So. Engineering & Technology</div>
+      <p>
+        “Our mission is to enhance future professionals in engineering and technology to engage with technological advancement, changes, skills, and better experience
+        in building stronger solutions to different problems that will improve their careers and brings changes and development to the society in all aspects”
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Chief Loyal University. All rights reserved.
+  </footer>
+
+</body>
+</html>

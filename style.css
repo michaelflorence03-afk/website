@@ -1,0 +1,426 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004d40;;
+  padding: 15px 30px;
+  color: white;
+}
+.navbar .logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar .nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Header Section */
+.header {
+  text-align: left;
+  background-color: #ffffff;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+/* Logo + Title Row */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 65px;
+  margin-bottom: 5px;
+}
+
+.university-logo {
+  height: 95px; /* adjust logo size */
+}
+
+.university-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: steelblue;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+/* Navbar stays same, just ensure no gap between header and navbar */
+.navbar {
+  margin-top: 0;
+  border-top: 2px solid #004d40;
+}
+
+
+/* Hero Section with Slideshow */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;   /* full hero height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideShow 15s infinite;
+}
+
+/* Show each image in order */
+.slides img:nth-child(1) { animation-delay: 0s; }
+.slides img:nth-child(2) { animation-delay: 5s; }
+.slides img:nth-child(3) { animation-delay: 10s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Text over slideshow */
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.hero-text .btn {
+  padding: 10px 20px;
+  background: #ff9800;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero-text .btn:hover {
+  background: #e68900;
+}
+
+
+/* Footer */
+footer {
+  background: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 33px;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.testimonials h2 {
+  margin-bottom: 30px;
+}
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  font-style: italic;
+}
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: normal;
+  color: #004d40;
+}
+
+/* News Section */
+.news {
+  padding: 50px 20px;
+  text-align: center;
+}
+.news h2 {
+  margin-bottom: 30px;
+}
+.news-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.news-card {
+  background: #e0f2f1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.news-card h3 {
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta {
+  background: linear-gradient(rgba(116, 129, 126, 0.8), rgba(0,77,64,0.8)), url("images/college2.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;      /* reduced padding */
+  max-width: 600px;         /* smaller width */
+  margin: 50px auto;        /* center horizontally with space above/below */
+  border-radius: 10px;      /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* subtle shadow for emphasis */
+}
+.cta h2 {
+  font-size: 28px;          /* slightly smaller heading */
+  margin-bottom: 15px;
+}
+.cta p {
+  font-size: 16px;          /* slightly smaller text */
+  margin-bottom: 20px;
+}
+.btn-cta {
+  background: #06c98bf5;
+  color: #fff;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+.btn-cta:hover {
+  background: #e68900;
+}
+
+/* Admission Form Section */
+.admission-form {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.admission-form h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #004d40;
+}
+.admission-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.admission-form input,
+.admission-form select,
+.admission-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+.admission-form button {
+  padding: 12px;
+  background: #ff9800;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.admission-form button:hover {
+  background: #e68900;
+}
+
+/* About Page */
+.leaders-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 30px 50px;
+  background: #fff8dc; /* HoneyDrew background */
+}
+/* Leaders Section */
+.leaders-section {
+  max-width: 1000px;          /* wider container so cards can spread out */
+  margin: 30px 0 30px 50px;   /* add left margin only to push it from edge */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* align cards to the left */
+  gap: 25px;  /* spacing between cards */ 
+  flex: 1;
+}
+
+
+/* Each Leader Card */
+.leader-card {
+  width: 230px;                /* smaller card width */
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  padding: 13px;
+  transition: transform 0.3s ease;
+  text-align: center;          /* centers text inside card */
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+}
+
+.leader-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.leader-info h3 {
+  margin: 0;
+  color: #004d40;
+  font-size: 18px;
+}
+
+.position {
+  color: #948469;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.leader-info p {
+  color: #333;
+  line-height: 1.5;
+}
+
+leaders-right {
+  flex: 1;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.leaders-right h3 {
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.leaders-right p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.admission-section {
+  padding: 50px 80px;
+  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.admission-section h2 {
+  text-align: center;
+  color: #004d40;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Dropdown Base */
+.navbar ul li {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #29a99ef2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  min-width: 220px;
+
+  /* Animation setup */
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #00796b;
+}
+
+/* Smooth hover animation */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School of Health - Chief Loyal University</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0FFF0; /* HoneyDrew */
+      color: #333;
+    }
+
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .left-section {
+      flex: 2;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .left-section h2 {
+      color: darkcyan;
+      margin-bottom: 10px;
+    }
+
+    .left-section p {
+      line-height: 1.6;
+    }
+
+    .courses {
+      margin-top: 30px;
+    }
+
+    .courses h3 {
+      color: #004d40;
+      margin-bottom: 15px;
+      border-bottom: 2px solid darkcyan;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: darkcyan;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e0f7fa;
+    }
+
+    .apply-btn {
+      background-color: darkcyan;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #00796b;
+    }
+
+    .right-section {
+      flex: 1;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .director-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid darkcyan;
+    }
+
+    .director-name {
+      font-size: 20px;
+      color: darkcyan;
+      font-weight: bold;
+    }
+
+    .director-title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: darkcyan;
+      color: white;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">School of Health Sciences (SOH)</div>
+      <ul class="nav-links">
+        <li><a href="SET.html">Next</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Left Content -->
+    <div class="left-section">
+      <h2>Welcome to the School of Health</h2>
+      <p>
+        The School of Health is dedicated to excellence in health education, training, and research. 
+        Our programs are designed to produce competent health professionals ready to make an impact 
+        in the community and beyond.
+      </p>
+
+      <div class="courses">
+        <h3>Available Programs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Programme</th>
+              <th>Duration</th>
+              <th>Fee (TZS)</th>
+              <th>Director</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Doctor of Medicine</td>
+              <td>5 Years</td>
+              <td>4,500,000</td>
+              <td>Dr. Maria Andrew</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bachelor of Pharmacy</td>
+              <td>4 Years</td>
+              <td>4,000,000</td>
+              <td>Mr. Kelvin Paul</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bachelor of Science in Nursing</td>
+              <td>4 Years</td>
+              <td>3,500,000</td>
+              <td>Mrs. Anna James</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Bachelor of Science in Medical Laboratory</td>
+              <td>3 Years</td>
+              <td>3,000,000</td>
+              <td>Ms. Alice Moses</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Bachelor of Health service Management </td>
+              <td>3 Years</td>
+              <td>2,000,000</td>
+              <td>Mr. Thomas Ezekiel</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="apply-btn" onclick="window.open('programmes.html', '_blank')">Apply Now</button>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right-section">
+      <img src="images/director02.jpg" alt="Director of School of Health" class="director-img">
+      <div class="director-name">Prof. Jeniffer K. Williams</div>
+      <div class="director-title">Director, School of Health</div>
+      <p>
+        “Our mission is to empower future health professionals with the knowledge, skills, 
+        and compassion needed to transform healthcare in Tanzania and beyond.”
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Chief Loyal University. All rights reserved.
+  </footer>
+
+</body>
+</html>
