@@ -27,6 +27,7 @@
   </div>
 
     <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks" onclick="this.classList.remove('active')">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About us</a></li>
       <li class="dropdown">
@@ -693,6 +694,13 @@ document.addEventListener("DOMContentLoaded", function () {
     soundBtn.textContent = video.muted ? "🔇" : "🔊";
   });
 });
+</script>
+
+  <script>
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
 </script>
 
 </body>
