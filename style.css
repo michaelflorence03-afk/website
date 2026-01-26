@@ -8,7 +8,6 @@
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: #004d40;;
   padding: 15px 30px;
@@ -22,6 +21,7 @@
 .navbar .nav-links {
   list-style: none;
   display: flex;
+  margin: 0 auto;
 }
 .navbar .nav-links li {
   margin-left: 20px;
