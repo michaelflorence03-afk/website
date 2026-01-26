@@ -19,10 +19,16 @@
   font-weight: bold;
 }
 .navbar .nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0 auto;
-}
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: darkcyan;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
 .navbar .nav-links li {
   margin-left: 20px;
 }
