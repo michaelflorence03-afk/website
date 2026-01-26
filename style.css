@@ -8,6 +8,7 @@
 /* Navbar */
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background: #004d40;;
   padding: 15px 30px;
