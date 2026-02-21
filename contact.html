@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Chief Loyal University</title>
-
+  <link rel="stylesheet" href="https://cdnsjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <!--preload images -->
   <link rel="preload" as="image" href="images/admission1.jpg">
   <link rel="preload" as="image" href="images/administration.png">
@@ -199,6 +200,50 @@ footer {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap; 
+      }
+  
+.social-item {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+      }
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  heigt: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 6px;
+  transition: 0.3s ease;
+}
+
+/ *Brand colors */
+.whatsapp {
+  backgroud: #25D366;
+}
+.instagram {
+  background: #E1306C;
+}
+.facebook {
+  background: #1877F2;
+}
+
+.social-icon: hover {
+  transform: translateY(-5px) scale(1.05);
+  opacity: 0.9;
+}
+    
   </style>
 </head>
 <body>
@@ -458,6 +503,26 @@ footer {
   <!-- Footer -->
   <footer>
     <p>Copyright &copy; 2025 Chief Loyal University | All Rights Reserved</p>
+
+    <div class="social-container">
+      <div class="social-item">
+        <a href="https://wa.me/255620705614" target="_blank" class="social-icon whatsapp"> 
+          <i class="fab fa-whatsapp"></i> </a>
+           <span>whatsApp</span>
+    </div>
+
+    <div class="social-item">
+      <a href="https://instagram.com/chief_loyal" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i> </a>
+         <span>Instagram</span>
+    </div>
+
+    <div class="social-item">
+      <a href="https://facebook.com/Charles Michael" target="_blank" class="social-icon facebook">
+        <i class="fab fa-facebook-f"></i> </a>
+         <span>Facebook</span>
+    </div>
+   </div>     
   </footer>
 </body>
 </html>
